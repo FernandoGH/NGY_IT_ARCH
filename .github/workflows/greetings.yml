@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Este es el repositorio de activos de arquitectura de Naturgy IT'' first issue'
+        pr-message: 'Abril 2020 - Fernando G. Velasco'' first pr'
